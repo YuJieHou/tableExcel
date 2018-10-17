@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导出图片和数据到Excel</title>
+</head>
+<body>
+	<button id="btn">导出表格</button>
+</body>
+<script src="export2Excel.js"></script>
+<script>
+	// tHeader和tbody的数据需要一一对应
+	let tHeader = [
+		'图片',
+		'商品名称',
+		'标签价',
+		'规格',
+		'条形码',
+		'采购件数',
+		'商家货号'
+	]
+	let tbody = [
+		{
+			pic: 'http://static.wantscart.com/product/1534497745817_750_1000',
+			name: '商品名称',
+			pick: '黄色',
+			pick1: '标签价',
+			pick2: '规格',
+			pick3: '条形码',
+			pick4: '采购件数',
+			pick5: '商家货号',
+		},
+		{
+			pic: 'http://static.wantscart.com/product/1533783887659_750_1000',
+			name: '商品名称',
+			pick: '黄色',
+			pick1: '标签价',
+			pick2: '规格',
+			pick3: '条形码',
+			pick4: '采购件数',
+			pick5: '商家货号',
+		},
+		{
+			pic: 'http://static.wantscart.com/product/1523511713584_171_229',
+			name: '商品名称',
+			pick: '黄色',
+			pick1: '标签价',
+			pick2: '规格',
+			pick3: '条形码',
+			pick4: '采购件数',
+			pick5: '商家货号',
+		}
+	]
+	btn.onclick=function(){
+		export2Excel(tHeader, tbody, '我爱花朵.xls');
+	}
+</script>
+</html>
